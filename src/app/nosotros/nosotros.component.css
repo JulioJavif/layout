@@ -1,0 +1,11 @@
+.main{
+    text-align: center;
+    background-color: darkgray;
+    align-items: center;
+}
+
+.informacion{
+    color: black;
+    margin: 0px auto;
+    width: 60%;
+}
