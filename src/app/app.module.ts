@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductosComponent } from './productos/productos.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavigationComponent,
     SkeletonComponent,
     ProductosComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
