@@ -1,0 +1,9 @@
+span {
+    color: floralwhite;
+    -webkit-text-stroke: 1px white;
+    font-size: x-large;
+}
+
+.texto-tienda {
+    background-color: rgba(0, 0, 0, 0.616);
+}
