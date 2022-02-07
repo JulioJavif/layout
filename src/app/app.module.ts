@@ -8,13 +8,10 @@ import { SkeletonComponent } from './skeleton/skeleton.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductosComponent } from './productos/productos.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 
 //import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-//import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -30,10 +27,7 @@ import { RegistroComponent } from './registro/registro.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    //FormsModule,
-    //ReactiveFormsModule,
-    //MatCarouselModule.forRoot()
+    //ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
