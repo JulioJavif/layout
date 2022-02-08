@@ -8,25 +8,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  form;
-
-  constructor(private formBuilder: FormBuilder) { 
-
-    this.form = formBuilder.group({
-      'correo': ['', Validators.required],
-      'contrasena': ['', Validators.required]
-    });
+  constructor() { 
   }
 
   ngOnInit(): void {
   }
-
-  submit(){
-    if (this.form.valid) {
-      console.table(this.form);
-    } else {
-      alert('DEBE LLENAR LOS CAMPOS');
-    }
-  }
-
 }

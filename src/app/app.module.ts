@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -10,8 +11,8 @@ import { ProductosComponent } from './productos/productos.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ContactComponent } from './contact/contact.component';
 
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,13 @@ import { FormsModule } from '@angular/forms';
     ProductosComponent,
     NosotrosComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
