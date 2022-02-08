@@ -15,46 +15,48 @@
 
                         <h2 class="mb-5">Registro</h2>
 
-                        <div class="form-outline mb-4">
-                            <input class="form-control form-control-lg" type="text" name="nombre" id="nombreForm">
-                            <label class="form-label" for="nombreForm">Nombre completo</label>
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <input class="form-control form-control-lg" type="text" name="usuario" id="usuarioForm">
-                            <label class="form-label" for="usuarioForm">Nombre de usuario</label>
-                        </div>
-                        
-                        <div class="form-outline mb-4">
-                            <input class="form-control form-control-lg" type="email" name="correo" id="emailForm">
-                            <label class="form-label" for="correoForm">Correo</label>
-                        </div>
-                        
-                        <div class="form-outline mb-4">
-                            <input class="form-control formcontrol-lg" type="number" name="telefono" id="telefonoForm">
-                            <label for="telefonoForm">Teléfono</label>
-                        </div>
-                        
-                        <div class="form-outline mb-4">
-                            <input class="form-control form-control-lg" type="password" name="contrasena" id="contrasenaForm">
-                            <label class="form-label" for="contrasenaForm">Contraseña</label>
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <input class="form-control form-control-lg" type="password" name="contrasena2" id="contrasenaForm2">
-                            <label class="form-label" for="contrasenaForm2">Confirmar contraseña</label>
-                        </div>
-
-                        <div class="form-check d-flex justify-content-start mb-4">
-                            <input class="form-checkbox-input" type="checkbox" name="aceptarT&C" id="aceptartyc">
-                            <label class="form-label" for="aceptartyc">Aceptar T&C</label>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <button class="btn btn-primary btn-lg" type="submit">Registrar</button>
+                        <form id="registro" [formGroup]="registroForm" (ngSubmit)="saveForm()">
+                            <div class="form-outline mb-4">
+                                <input formControlName="nombre" class="form-control form-control-lg" type="text" name="nombre" id="nombreForm">
+                                <label class="form-label" for="nombreForm">Nombre completo</label>
                             </div>
-                        </div>
+    
+                            <div class="form-outline mb-4">
+                                <input formControlName="usuario" class="form-control form-control-lg" type="text" name="usuario" id="usuarioForm">
+                                <label class="form-label" for="usuarioForm">Nombre de usuario</label>
+                            </div>
+                            
+                            <div class="form-outline mb-4">
+                                <input formControlName="correo" class="form-control form-control-lg" type="email" name="correo" id="emailForm">
+                                <label class="form-label" for="correoForm">Correo</label>
+                            </div>
+                            
+                            <div class="form-outline mb-4">
+                                <input formControlName="telefono" class="form-control formcontrol-lg" type="number" name="telefono" id="telefonoForm">
+                                <label for="telefonoForm">Teléfono</label>
+                            </div>
+                            
+                            <div class="form-outline mb-4">
+                                <input formControlName="contrasena" class="form-control form-control-lg" type="password" name="contrasena" id="contrasenaForm">
+                                <label class="form-label" for="contrasenaForm">Contraseña</label>
+                            </div>
+    
+                            <div class="form-outline mb-4">
+                                <input formControlName="contrasena2" class="form-control form-control-lg" type="password" name="contrasena2" id="contrasenaForm2">
+                                <label class="form-label" for="contrasenaForm2">Confirmar contraseña</label>
+                            </div>
+    
+                            <div class="form-check d-flex justify-content-start mb-4">
+                                <input formControlName="tyc" class="form-checkbox-input" type="checkbox" name="aceptarT&C" id="aceptartyc">
+                                <label class="form-label" for="aceptartyc">Aceptar T&C</label>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-primary btn-lg" type="submit">Registrar</button>
+                                </div>
+                            </div>
+                        </form>
 
                     </div>
                 </div>

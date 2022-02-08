@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'contactForm',
@@ -10,9 +10,9 @@ export class ContactComponent implements OnInit {
 
   createFormGroup(){
     return new FormGroup({
-      correo: new FormControl(''),
-      nombre: new FormControl(''),
-      mensage: new FormControl('')
+      correo: new FormControl('', Validators.email),
+      nombre: new FormControl('', Validators.required),
+      mensage: new FormControl('', Validators.required)
     });
   }
 
@@ -34,12 +34,15 @@ export class ContactComponent implements OnInit {
   saveForm(){
 
     const contacto = this.formulario.value;
-    console.log('Guardado!', contacto);
+    //console.log('Guardado!', contacto);
 
-    if(contacto.nombre!='' && contacto.correo!='' && contacto.mensage!=''){
-      alert('Datos guardados' + contacto);
+    if(this.formulario.valid){
+      console.table(contacto);
+      alert('Datos guardados');
+
+      this.resetForm();
     }else{
-      alert('Debe llenar todos los campos!!!')
+      alert('Debe llenar todos los campos!!!\n\n* Revise si el correo está bien escrito.')
     }
 
   }

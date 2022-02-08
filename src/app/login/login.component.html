@@ -15,27 +15,29 @@
 
                         <h2 class="mb-5">Inicio de sesión</h2>
 
-                        <div class="form-outline mb-4">
-                            <input type="email" name="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Ejemplo: juan@mail.com">
-                            <label for="typeEmailX-2" class="form-label">Correo</label>
-                        </div>
-
-                        <div class="form-outline mb-4">
-                            <input type="password" name="psw" id="typePasswordX-2" class="form-control form-control-lg" placeholder="*******">
-                            <label for="typePasswordX-2" class="form-label">Contraseña</label>
-                        </div>
-
-                        <div class="form-check d-flex justify-content-start mb-4">
-                            <input type="checkbox" name="recordar" id="recordar" class="form-check-input">
-                            <label for="recordar" class="form-check-label">Recordar contraseña</label>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <button class="btn btn-primary btn-lg" type="submit">Entrar</button>
+                        <form [formGroup]="login" (ngSubmit)="logIn()">
+                            <div class="form-outline mb-4">
+                                <input formControlName="usuario" type="text" name="usuario" id="typeEmailX-2" class="form-control form-control-lg">
+                                <label for="typeEmailX-2" class="form-label">Correo</label>
                             </div>
-                        </div>
-
+    
+                            <div class="form-outline mb-4">
+                                <input formControlName="contrasena" type="password" name="psw" id="typePasswordX-2" class="form-control form-control-lg" placeholder="*******">
+                                <label for="typePasswordX-2" class="form-label">Contraseña</label>
+                            </div>
+    
+                            <div class="form-check d-flex justify-content-start mb-4">
+                                <input formControlName="recordar" type="checkbox" name="recordar" id="recordar" class="form-check-input">
+                                <label for="recordar" class="form-check-label">Recordar contraseña</label>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-primary btn-lg" type="submit">Entrar</button>
+                                </div>
+                            </div>    
+                        </form>
+                        
                         <hr class="my-4">
                     </div>
                 </div>
