@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
     return new FormGroup({
       correo: new FormControl('', Validators.email),
       nombre: new FormControl('', Validators.required),
-      mensage: new FormControl('', Validators.required)
+      mensaje: new FormControl('', Validators.required)
     });
   }
 

@@ -42,7 +42,7 @@ export class RegistroComponent implements OnInit {
     if(this.registroForm.valid){
       //console.log('Registro creado!!');
       console.table(registro);
-      alert('Registro creado\n'+'nombre: '+registro.nombre)
+      alert('Registro creado para: '+registro.nombre)
 
       this.resetForm();
     }else{

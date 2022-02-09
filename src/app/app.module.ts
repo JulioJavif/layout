@@ -13,6 +13,20 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ContactComponent } from './contact/contact.component';
 
+// import { FirebaseAppModule } from '@angular/fire/app';
+// import { AuthModule } from '@angular/fire/auth';
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAzxXisFRBe24B_aRVxOaB_KKfQT8zvPvU",
+//   authDomain: "formcontact-585b0.firebaseapp.com",
+//   projectId: "formcontact-585b0",
+//   storageBucket: "formcontact-585b0.appspot.com",
+//   messagingSenderId: "172730145915",
+//   appId: "1:172730145915:web:7e7c8c5cd05989ba2ed6de",
+//   measurementId: "G-PZTS0SGJL0"
+// };
 
 @NgModule({
   declarations: [
@@ -30,6 +44,8 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
