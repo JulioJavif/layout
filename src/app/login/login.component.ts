@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
     const esUsuario = datos.usuario === 'admin' && datos.contrasena === 'admin';
 
     if(this.login.valid && esUsuario){
+      sessionStorage.setItem('login', JSON.stringify(datos));
       alert('Puede iniciar sesión');
     }else{
       alert('Datos incorrectos');

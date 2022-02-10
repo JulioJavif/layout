@@ -38,6 +38,9 @@ export class ContactComponent implements OnInit {
 
     if(this.formulario.valid){
       console.table(contacto);
+
+      localStorage.setItem('mensaje', JSON.stringify(contacto));
+
       alert('Datos guardados');
 
       this.resetForm();

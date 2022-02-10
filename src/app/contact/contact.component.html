@@ -3,16 +3,17 @@
 
     <form id="contacto" [formGroup]="formulario" (ngSubmit)="saveForm()">
         <div class="input-group mb-3">
-            <input class="form-control" type="text" formControlName="nombre" placeholder="Tu nombre">
+            <input class="form-control" type="text" formControlName="nombre" placeholder="Tu nombre" required>
         </div>
         <div class="input-group mb-3">
-            <input class="form-control" type="email" formControlName="correo" placeholder="Tu correo">
+            <input class="form-control" type="email" formControlName="correo" placeholder="Tu correo" required>
         </div>
         <div class="input-group mb-3">
-            <textarea class="form-control" formControlName="mensaje" cols="60" rows="10"></textarea>
+            <textarea class="form-control" formControlName="mensaje" cols="60" rows="10" placeholder="Mensaje" required></textarea>
         </div>
-        
-        <button class="form-control btn btn-success" type="submit">Enviar</button>
+        <div class="input-group mb-3">
+            <button class="form-control btn btn-success" type="submit">Enviar</button>
+        </div>
         
     </form>
 </div>
